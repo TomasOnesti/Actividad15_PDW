@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Malvinas registro</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Malvinas: Voces del Frente</h1>
+            <p>Registro de enfrentamientos y estadísticas del jugador.</p>
+        </header>
+
+        <main class="contenedor">
+
+            <!-- Estadísticas -->
+            <section class="seccion estadisticas">
+                <h2>Estadísticas del jugador</h2>
+
+                <p>Enfrentamientos:
+                    <span id="contador">0</span>
+                </p>
+
+                <p>Enemigos eliminados:
+                    <span id="enemigos">0</span>
+                </p>
+
+                <p>Puntaje total:
+                    <span id="puntaje-total">0</span>
+                </p>
+
+                <p>Mejor tiempo:
+                    <span id="mejor-tiempo">--:--</span>
+                </p>
+            </section>
+
+            <!-- Registro de enfrentamientos -->
+            <section class="seccion">
+
+                <h2>Registrar enfrentamiento</h2>
+
+                <form id="form-enfrentamiento">
+
+                    <input
+                        type="text"
+                        id="mision"
+                        placeholder="Nombre de la misión"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="enemigos-eliminados"
+                        placeholder="Enemigos eliminados"
+                        min="0"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="tiempo"
+                        placeholder="Tiempo en segundos"
+                        min="1"
+                        required
+                    >
+
+                    <button type="submit">
+                        Registrar resultado
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Historial -->
+            <section class="seccion">
+
+                <h2>Historial de enfrentamientos</h2>
+
+                <ul id="lista-enfrentamientos"></ul>
+
+                <button onclick="vaciarHistorial()">
+                    Reiniciar historial
+                </button>
+
+            </section>
+
+        </main>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

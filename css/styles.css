@@ -1,0 +1,249 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #34b8bd;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #d8d7d4;
+    font-size: 28px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #383a38;
+}
+
+/* Distribución principal */
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+   
+}
+
+/* Secciones */
+.seccion {
+    background: #e7e6e4;
+    color: #000000;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #f1dd27;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.seccion h2 {
+    margin-bottom: 20px;
+    color: #314e28;
+    border-bottom: 2px solid #8b8b86;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* Estadísticas */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.estadistica {
+    background: #303B32;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #69745B;
+}
+
+.estadistica h3 {
+    color: #D8C99B;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.estadistica p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* Formulario de enfrentamientos */
+#form-enfrentamiento {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#form-enfrentamiento label {
+    font-weight: bold;
+    color: #354333;
+}
+
+#form-enfrentamiento input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #92977F;
+    border-radius: 7px;
+    background: #F8F6EE;
+    color: #252A24;
+    font-size: 15px;
+}
+
+#form-enfrentamiento input:focus {
+    outline: 2px solid #697B50;
+}
+
+/* Botones */
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.btn-agregar {
+    background: #526746;
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-agregar:hover {
+    background: #394B32;
+}
+
+/* Historial */
+.historial {
+    min-width: 0;
+}
+
+.contador {
+    display: inline-block;
+    background: #697B50;
+    color: #FFFFFF;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Lista de enfrentamientos */
+#lista-enfrentamientos {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#lista-enfrentamientos li {
+    background: #F5F1E5;
+    border-left: 5px solid #697B50;
+    border-radius: 7px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#lista-enfrentamientos li h3 {
+    color: #354333;
+    margin-bottom: 8px;
+}
+
+#lista-enfrentamientos li p {
+    color: #50564C;
+    margin: 4px 0;
+}
+
+/* Puntaje */
+.puntaje {
+    color: #8A6D28;
+    font-weight: bold;
+}
+
+/* Eliminar registro */
+.btn-eliminar {
+    background: #93483D;
+    color: #FFFFFF;
+    padding: 7px 10px;
+}
+
+.btn-eliminar:hover {
+    background: #71352D;
+}
+
+/* Vaciar historial */
+.btn-vaciar {
+    width: 100%;
+    margin-top: 15px;
+    background: #303B32;
+    color: #FFFFFF;
+}
+
+.btn-vaciar:hover {
+    background: #93483D;
+}
+
+/* Mensaje de historial vacío */
+.vacio {
+    color: #77796E;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+    body {
+        padding: 15px;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .estadisticas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 18px;
+    }
+
+    #lista-enfrentamientos li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
